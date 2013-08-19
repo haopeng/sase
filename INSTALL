@@ -1,0 +1,35 @@
+Installation instructions 
+=========================
+Software Requirement
+ * Install the Java Runtime Environment version 1.5.x or later
+
+Configuration
+(If you are using Windows, please install Cygwin first.)
+
+Please follow the configuration steps below:
+ * Unzip the package you downloaded
+ * Set the SASE_HOME environment variable to point to the folder where the unzipped files are placed.
+ * Add $SASE_HOME/build/sase.jar to the CLASSPATH
+ * Add $SASE_HOME/lib/jeval.jar to the CLASSPATH.
+ * Add $SASE_HOME/bin to the PATH to access all the executables.
+
+Next you can run the sase.jar under the build/ folder by these commands:
+ 1. Test run 
+ 	The work directory is $SASE_HOME/build. Then use the following command to test the engine:
+    
+     "sase"
+ 
+ 2. Run with configurations  
+ 	The engine allows you to designate the query file and the stream file, and you can run the engine under any directory using the following command:
+
+	"sase  Query_File Stream_File  Print_Result_Flag"
+	
+	The meanings of the parameters are explained as follows:
+
+	- "Query_File"	 specifies the location of the query file, which is the full path of the file
+	- "Stream_File"	 specifies the location of the config file for the stream generator, which is the full path of the file
+	- "Print_Result_Flag"	 specifies whether or not to print the details of the result in the console. 1 for print, 0 for not print
+
+See more details about the command via this link: http://code.google.com/p/sase-umass/wiki/02RunExperiments
+
+If you want to modify the source code, the Main Class is edu.umass.cs.sase.UI.CommandLineUI.java.

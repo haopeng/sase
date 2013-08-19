@@ -1,0 +1,3 @@
+#!/bin/bash
+
+java edu.umass.cs.sase.UI.CommandLineUI $1 $2 $3
